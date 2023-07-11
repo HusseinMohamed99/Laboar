@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:laboar/main_screen.dart';
+import 'package:laboar/core/global/theme/theme_data/theme_data.dart';
+import 'package:laboar/core/utils/enum.dart';
+import 'package:laboar/presentation/on_boarding/on_boarding_screen.dart';
 import 'package:wakelock/wakelock.dart';
 
 void main() async {
@@ -29,9 +31,10 @@ class MyApp extends StatelessWidget {
           minTextAdapt: true,
           splitScreenMode: true,
           builder: (context, child) {
-            return const MaterialApp(
+            return MaterialApp(
               debugShowCheckedModeBanner: false,
-              home: MainScreen(),
+              theme: getThemeData[AppTheme.lightTheme],
+              home: const OnBoardingScreen(),
             );
           },
         );
