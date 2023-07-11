@@ -20,26 +20,21 @@ void pop(context) {
   Navigator.pop(context);
 }
 
-void navigateTo(context, {required String routeName, Object? arguments}) {
-  Navigator.pushNamed(context, routeName, arguments: arguments);
+void navigateTo(context, widget) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => widget,
+    ),
+  );
 }
 
-// void navigateToWithRouting(context, widget) {
-//   Navigator.push(context, widget);
-//   Navigator.push(context, Routing().createRoute(widget));
-// }
-
-void navigateAndFinish(
-  context, {
-  required String routeName,
-  Object? arguments,
-}) {
-  Navigator.pushNamedAndRemoveUntil(
-      context, routeName, arguments: arguments, (route) => false);
+void navigateAndFinish(context, widget) {
+  Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(
+        builder: (context) => widget,
+      ), (route) {
+    return false;
+  });
 }
-
-// void navigateAndFinishWithRouting(context, widget) {
-//   Navigator.pushAndRemoveUntil(context, Routing().createRoute(widget), (route) {
-//     return false;
-//   });
-// }

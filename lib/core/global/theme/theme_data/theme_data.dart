@@ -18,15 +18,42 @@ final getThemeData = {
         ).r,
       ),
     ),
-    textTheme: const TextTheme(
-      bodyLarge: TextStyle(
-        color: AppColorsLight.textColor,
+    textTheme: TextTheme(
+      bodyLarge: GoogleFonts.quicksand(
+        color: AppColorsLight.textBlackColor,
+        fontSize: 48.sp,
+        fontWeight: FontWeight.bold,
       ),
-      bodyMedium: TextStyle(
-        color: AppColorsLight.textColor,
+      bodyMedium: GoogleFonts.quicksand(
+        color: AppColorsLight.textBlackColor,
       ),
-      bodySmall: TextStyle(
-        color: AppColorsLight.textColor,
+      bodySmall: GoogleFonts.quicksand(
+        color: AppColorsLight.textBlackColor,
+      ),
+      titleLarge: GoogleFonts.quicksand(
+        color: AppColorsLight.textBlackColor,
+        fontSize: 20.sp,
+        fontWeight: FontWeight.bold,
+      ),
+      titleMedium: GoogleFonts.quicksand(
+        color: AppColorsLight.textBlackColor,
+        fontSize: 14.sp,
+      ),
+      titleSmall: GoogleFonts.quicksand(
+        color: AppColorsLight.textBlackColor,
+      ),
+      labelLarge: GoogleFonts.quicksand(
+        color: AppColorsLight.textBlackColor,
+        fontSize: 18.sp,
+      ),
+      labelMedium: GoogleFonts.quicksand(
+        color: AppColorsLight.textBlackColor,
+        fontSize: 16.sp,
+      ),
+      labelSmall: GoogleFonts.quicksand(
+        color: AppColorsLight.textBlackColor.withOpacity(0.50),
+        fontSize: 14.sp,
+        fontWeight: FontWeight.w400,
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(

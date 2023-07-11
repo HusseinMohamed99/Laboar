@@ -10,10 +10,21 @@ class MyDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width ?? double.infinity,
-      height: height ?? 2.0.h,
-      color: color ?? Colors.grey,
+    return Opacity(
+      opacity: 0.10,
+      child: Container(
+        width: width ?? double.infinity,
+        height: height ?? 2.0.h,
+        decoration: ShapeDecoration(
+          color: color ?? Colors.grey,
+          shape: const RoundedRectangleBorder(
+            side: BorderSide(
+              width: 0.50,
+              strokeAlign: BorderSide.strokeAlignCenter,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
