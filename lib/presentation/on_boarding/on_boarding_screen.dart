@@ -19,6 +19,7 @@ class OnBoardingScreen extends StatelessWidget {
     final textTheme = getThemeData[AppTheme.lightTheme]!.textTheme;
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         toolbarHeight: 10.h,
         backgroundColor: Colors.transparent,
@@ -90,11 +91,12 @@ class OnBoardingScreen extends StatelessWidget {
             ),
             Space(height: 36.h, width: 0),
             defaultMaterialButton(
-                function: () {
-                  navigateTo(context, const PrefScreen());
-                },
-                text: 'Enter',
-                color: Colors.green)
+              function: () {
+                navigateTo(context, const PrefScreen());
+              },
+              text: 'Enter',
+              color: AppColorsLight.lightPrimaryColor,
+            ),
           ],
         ),
       ),

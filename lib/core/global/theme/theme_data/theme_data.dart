@@ -8,7 +8,7 @@ import 'package:laboar/core/utils/enum.dart';
 final getThemeData = {
   AppTheme.lightTheme: ThemeData(
     scaffoldBackgroundColor: AppColorsLight.scaffoldBackgroundColor,
-    primaryColor: AppColorsLight.lightPrimary,
+    primaryColor: AppColorsLight.lightPrimaryColor,
     bottomSheetTheme: BottomSheetThemeData(
       backgroundColor: AppColorsLight.bottomSheetColor,
       shape: RoundedRectangleBorder(
@@ -32,7 +32,7 @@ final getThemeData = {
       ),
       titleLarge: GoogleFonts.quicksand(
         color: AppColorsLight.textBlackColor,
-        fontSize: 20.sp,
+        fontSize: 34.sp,
         fontWeight: FontWeight.bold,
       ),
       titleMedium: GoogleFonts.quicksand(
@@ -49,6 +49,7 @@ final getThemeData = {
       labelMedium: GoogleFonts.quicksand(
         color: AppColorsLight.textBlackColor,
         fontSize: 16.sp,
+        fontWeight: FontWeight.w600,
       ),
       labelSmall: GoogleFonts.quicksand(
         color: AppColorsLight.textBlackColor.withOpacity(0.50),
@@ -62,16 +63,16 @@ final getThemeData = {
       showUnselectedLabels: false,
       selectedIconTheme: IconThemeData(
         size: 30.sp,
-        color: AppColorsLight.lightPrimary,
+        color: AppColorsLight.lightPrimaryColor,
       ),
       unselectedIconTheme: IconThemeData(
         size: 24.sp,
         color: Colors.white,
       ),
       selectedLabelStyle: const TextStyle(
-        color: AppColorsLight.lightPrimary,
+        color: AppColorsLight.lightPrimaryColor,
       ),
-      selectedItemColor: AppColorsLight.lightPrimary,
+      selectedItemColor: AppColorsLight.lightPrimaryColor,
     ),
   ),
   AppTheme.darkTheme: ThemeData(
