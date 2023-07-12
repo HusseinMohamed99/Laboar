@@ -50,11 +50,351 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// ``
-  String get app_title {
+  /// `Laboar`
+  String get appTitle {
     return Intl.message(
-      '',
-      name: 'app_title',
+      'Laboar',
+      name: 'appTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Find Your\nHome Service`
+  String get title {
+    return Intl.message(
+      'Find Your\nHome Service',
+      name: 'title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Easy Process`
+  String get title1 {
+    return Intl.message(
+      'Easy Process',
+      name: 'title1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expert People`
+  String get title2 {
+    return Intl.message(
+      'Expert People',
+      name: 'title2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All In One Place`
+  String get title3 {
+    return Intl.message(
+      'All In One Place',
+      name: 'title3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Find all your house needs in one place.  We provide every service to make your home experience smooth.`
+  String get body1 {
+    return Intl.message(
+      'Find all your house needs in one place.  We provide every service to make your home experience smooth.',
+      name: 'body1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We have the best in class individuals working just for you. They are well  trained and capable of handling anything you need.`
+  String get body2 {
+    return Intl.message(
+      'We have the best in class individuals working just for you. They are well  trained and capable of handling anything you need.',
+      name: 'body2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We have all the household services \nyou need on a daily basis with\n easy access`
+  String get body3 {
+    return Intl.message(
+      'We have all the household services \nyou need on a daily basis with\n easy access',
+      name: 'body3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Language`
+  String get selectLanguage {
+    return Intl.message(
+      'Select Language',
+      name: 'selectLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By creating an account, you agree to our  \nTerm and Conditions`
+  String get termAndConditions {
+    return Intl.message(
+      'By creating an account, you agree to our  \nTerm and Conditions',
+      name: 'termAndConditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter`
+  String get enter {
+    return Intl.message(
+      'Enter',
+      name: 'enter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message(
+      'Skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign In`
+  String get signIn {
+    return Intl.message(
+      'Sign In',
+      name: 'signIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up`
+  String get signUp {
+    return Intl.message(
+      'Sign Up',
+      name: 'signUp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `OR`
+  String get or {
+    return Intl.message(
+      'OR',
+      name: 'or',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Enter your Phone and password\nto continue`
+  String get authLogin {
+    return Intl.message(
+      'Please Enter your Phone and password\nto continue',
+      name: 'authLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Phone`
+  String get EnterPhoneNumber {
+    return Intl.message(
+      'Enter Your Phone',
+      name: 'EnterPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Password`
+  String get EnterPassword {
+    return Intl.message(
+      'Enter Your Password',
+      name: 'EnterPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget Password`
+  String get forgetPassword {
+    return Intl.message(
+      'Forget Password',
+      name: 'forgetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Facebook`
+  String get facebook {
+    return Intl.message(
+      'Facebook',
+      name: 'facebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Google`
+  String get google {
+    return Intl.message(
+      'Google',
+      name: 'google',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don’t Have Account ?`
+  String get noAccount {
+    return Intl.message(
+      'Don’t Have Account ?',
+      name: 'noAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get fullName {
+    return Intl.message(
+      'Full Name',
+      name: 'fullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Full Name`
+  String get enterFullName {
+    return Intl.message(
+      'Enter Your Full Name',
+      name: 'enterFullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Have Account ?`
+  String get haveAccount {
+    return Intl.message(
+      'Have Account ?',
+      name: 'haveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Otp`
+  String get otp {
+    return Intl.message(
+      'Otp',
+      name: 'otp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An Authentecation code has been sent to`
+  String get hintOtp {
+    return Intl.message(
+      'An Authentecation code has been sent to',
+      name: 'hintOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Submit`
+  String get submit {
+    return Intl.message(
+      'Submit',
+      name: 'submit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Code Sent. Resend Code in`
+  String get hintSend {
+    return Intl.message(
+      'Code Sent. Resend Code in',
+      name: 'hintSend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset Password`
+  String get resetPassword {
+    return Intl.message(
+      'Reset Password',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create strong and secured\nnew password.`
+  String get hintPassword {
+    return Intl.message(
+      'Create strong and secured\nnew password.',
+      name: 'hintPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirmPassword',
       desc: '',
       args: [],
     );
@@ -65,16 +405,6 @@ class S {
     return Intl.message(
       'Settings',
       name: 'settings',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Language`
-  String get language {
-    return Intl.message(
-      'Language',
-      name: 'language',
       desc: '',
       args: [],
     );

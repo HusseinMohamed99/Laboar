@@ -22,13 +22,61 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "app_title": MessageLookupByLibrary.simpleMessage(""),
-        "arabic": MessageLookupByLibrary.simpleMessage("اللغة العربية"),
+        "EnterPassword":
+            MessageLookupByLibrary.simpleMessage("ادخل كلمة المرور"),
+        "EnterPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("ادخل رقم الهاتف"),
+        "appTitle": MessageLookupByLibrary.simpleMessage("لابوار"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "authLogin": MessageLookupByLibrary.simpleMessage(
+            "برجاء ادخال رقم الهاتف كلمة \nالمرور للدخول"),
+        "body1": MessageLookupByLibrary.simpleMessage(
+            "ابحث عن كل احتياجات منزلك في مكان واحد. نحن نقدم كل الخدمات لجعل تجربة منزلك سلسة."),
+        "body2": MessageLookupByLibrary.simpleMessage(
+            "لدينا أفضل الأفراد في مجالهم يعملون من أجلك فقط. إنهم مدربون جيدًا وقادرون على التعامل مع أي شيء تحتاجه."),
+        "body3": MessageLookupByLibrary.simpleMessage(
+            "لدينا جميع الخدمات المنزلية\nكل ما تحتاجة بشكل يومي وسهولة\n الاستخدام"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
         "dark": MessageLookupByLibrary.simpleMessage("داكن"),
-        "english": MessageLookupByLibrary.simpleMessage("اللغة الإنجليزية"),
-        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
+        "enter": MessageLookupByLibrary.simpleMessage("دخول"),
+        "enterFullName":
+            MessageLookupByLibrary.simpleMessage("ادخل الاسم بالكامل"),
+        "facebook": MessageLookupByLibrary.simpleMessage("فيس بوك"),
+        "forgetPassword":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
+        "fullName": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
+        "google": MessageLookupByLibrary.simpleMessage("جوجل"),
+        "haveAccount": MessageLookupByLibrary.simpleMessage(" لديك حساب ؟"),
+        "hintOtp": MessageLookupByLibrary.simpleMessage(
+            "رمز التحقيق تم ارسالة الي رقم"),
+        "hintPassword": MessageLookupByLibrary.simpleMessage(
+            "برجاء ادخال كلمة مرور \nلتاكيد حسابك"),
+        "hintSend":
+            MessageLookupByLibrary.simpleMessage("سيتم ارسال الكود مرة اخري"),
         "light": MessageLookupByLibrary.simpleMessage("فاتح"),
+        "next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "noAccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب ؟"),
+        "or": MessageLookupByLibrary.simpleMessage("او"),
+        "otp": MessageLookupByLibrary.simpleMessage("رمز الدخول"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الجوال"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("اعادة كلمة المرور"),
+        "selectLanguage": MessageLookupByLibrary.simpleMessage("اختار اللغة"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
-        "theme": MessageLookupByLibrary.simpleMessage("المظهر")
+        "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "signUp": MessageLookupByLibrary.simpleMessage("تسجيل جديد"),
+        "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+        "submit": MessageLookupByLibrary.simpleMessage("ارسال"),
+        "termAndConditions": MessageLookupByLibrary.simpleMessage(
+            "بتسجيلك هنا فانت توافق علي \nالشروط والاحكام"),
+        "theme": MessageLookupByLibrary.simpleMessage("المظهر"),
+        "title": MessageLookupByLibrary.simpleMessage(
+            "جميع الخدمات المنزلية\nفي مكان واحد"),
+        "title1": MessageLookupByLibrary.simpleMessage("سهولة الوصول"),
+        "title2": MessageLookupByLibrary.simpleMessage("عمالة مميزة"),
+        "title3": MessageLookupByLibrary.simpleMessage("نجمع كل احتيجاتك")
       };
 }
