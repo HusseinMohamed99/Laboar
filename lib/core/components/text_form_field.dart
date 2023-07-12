@@ -124,7 +124,7 @@ class DefaultTextFormField extends StatelessWidget {
           borderRadius: BorderRadius.all(
             const Radius.circular(12.0).r,
           ),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
               //     color: borderSideColor ?? ThemeApp.secondaryColor,
               ),
         ),
