@@ -30,6 +30,9 @@ dependencies:
   fluttertoast: ^8.2.2
   intl: ^0.18.1
   smooth_page_indicator: ^1.1.0
+  firebase_auth: ^4.6.3
+  cloud_firestore: ^4.8.2
+  firebase_core: ^2.14.0
 
 dev_dependencies:
   build_runner: ^2.3.3

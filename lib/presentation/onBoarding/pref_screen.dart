@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:laboar/core/components/buttons.dart';
+import 'package:laboar/core/components/navigator.dart';
 import 'package:laboar/core/components/size_box.dart';
 import 'package:laboar/core/global/theme/app_color/app_color_light.dart';
 import 'package:laboar/core/global/theme/theme_data/theme_data.dart';
@@ -10,6 +10,7 @@ import 'package:laboar/core/network/cache_helper.dart';
 import 'package:laboar/core/utils/enum.dart';
 import 'package:laboar/generated/assets.dart';
 import 'package:laboar/model/on_board_model.dart';
+import 'package:laboar/presentation/homeScreen/home_screen.dart';
 
 class PrefScreen extends StatefulWidget {
   const PrefScreen({
@@ -53,14 +54,14 @@ class _PrefScreenState extends State<PrefScreen> {
       value: true,
     ).then((value) {
       if (value) {
-        // navigateAndFinish(context, routeName: OnBoard.routeName);
+        navigateAndFinish(context, const HomeScreen());
       }
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // final textTheme = getThemeData[AppTheme.lightTheme]!.textTheme;
+    final textTheme = getThemeData[AppTheme.lightTheme]!.textTheme;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -74,15 +75,10 @@ class _PrefScreenState extends State<PrefScreen> {
             },
             child: Text(
               isLast ? '' : 'skip',
-              style: GoogleFonts.poppins(
+              style: textTheme.labelLarge!.copyWith(
                 color: AppColorsLight.lightThirdColor,
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.bold,
               ),
-
-              // style: TextStyle(
-
-              // ),
             ),
           ),
         ),
@@ -150,7 +146,7 @@ class _PrefScreenState extends State<PrefScreen> {
                       isLast
                           ? defaultMaterialButton(
                               function: () {
-                                //navigateTo(context, const PrefScreen());
+                                navigateAndFinish(context, const HomeScreen());
                               },
                               text: 'Enter',
                               color: AppColorsLight.lightPrimaryColor,

@@ -44,12 +44,13 @@ final getThemeData = {
       ),
       labelLarge: GoogleFonts.quicksand(
         color: AppColorsLight.textBlackColor,
-        fontSize: 18.sp,
+        fontSize: 20.sp,
+        fontWeight: FontWeight.bold,
       ),
       labelMedium: GoogleFonts.quicksand(
         color: AppColorsLight.textBlackColor,
         fontSize: 16.sp,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w700,
       ),
       labelSmall: GoogleFonts.quicksand(
         color: AppColorsLight.textBlackColor.withOpacity(0.50),

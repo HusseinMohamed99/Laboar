@@ -9,7 +9,7 @@ import 'package:laboar/core/global/theme/app_color/app_color_light.dart';
 import 'package:laboar/core/global/theme/theme_data/theme_data.dart';
 import 'package:laboar/core/utils/enum.dart';
 import 'package:laboar/generated/assets.dart';
-import 'package:laboar/presentation/on_boarding/pref_screen.dart';
+import 'package:laboar/presentation/onBoarding/pref_screen.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -40,7 +40,7 @@ class OnBoardingScreen extends StatelessWidget {
             Space(height: 58.h, width: 0),
             Text(
               'Select Language',
-              style: textTheme.titleLarge,
+              style: textTheme.labelLarge,
             ),
             Space(height: 15.h, width: 0),
             SizedBox(
@@ -50,7 +50,7 @@ class OnBoardingScreen extends StatelessWidget {
                 children: [
                   Text(
                     'English',
-                    style: textTheme.titleLarge,
+                    style: textTheme.labelMedium,
                   ),
                   InkWell(onTap: () {}, child: getSelectedItem()),
                 ],
@@ -67,7 +67,7 @@ class OnBoardingScreen extends StatelessWidget {
                 children: [
                   Text(
                     'Arabic',
-                    style: textTheme.titleLarge,
+                    style: textTheme.labelMedium,
                   ),
                   InkWell(onTap: () {}, child: getUnSelectedItem()),
                 ],

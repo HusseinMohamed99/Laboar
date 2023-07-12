@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "258114059275",
+    "project_id": "laboar-9d77d",
+    "storage_bucket": "laboar-9d77d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258114059275:android:6a051b8bffe93806061b0e",
+        "android_client_info": {
+          "package_name": "com.example.laboar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258114059275-5823ssqb0och09ee05k7kvso7as7aaa1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnkGDyPfcVwJL7UdL7HdqBHFdSdOmX4LQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258114059275-5823ssqb0och09ee05k7kvso7as7aaa1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "258114059275-86knq4qr96b154jr5ld49n8uu8b8noou.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.laboar"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

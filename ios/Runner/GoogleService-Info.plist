@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>258114059275-86knq4qr96b154jr5ld49n8uu8b8noou.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.258114059275-86knq4qr96b154jr5ld49n8uu8b8noou</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDpBcVE4-uuqkEVVT56yQJuUwa1K9SQOSs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>258114059275</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.laboar</string>
+	<key>PROJECT_ID</key>
+	<string>laboar-9d77d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>laboar-9d77d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:258114059275:ios:a520e0ff391e85c1061b0e</string>
+</dict>
+</plist>
