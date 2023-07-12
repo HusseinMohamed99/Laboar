@@ -52,6 +52,7 @@ class MyApp extends StatelessWidget {
                 DeviceOrientation.portraitUp,
                 DeviceOrientation.portraitDown,
               ]);
+
               return ScreenUtilInit(
                 designSize: const Size(360, 690),
                 minTextAdapt: true,
@@ -65,6 +66,9 @@ class MyApp extends StatelessWidget {
                       GlobalCupertinoLocalizations.delegate,
                     ],
                     supportedLocales: AppLocalizations.supportedLocales,
+                    locale: Locale(
+                      LaboarCubit.get(context).currentLanguage,
+                    ),
                     debugShowCheckedModeBanner: false,
                     theme: getThemeData[AppTheme.lightTheme],
                     home: const OnBoardingScreen(),

@@ -33,7 +33,6 @@ dependencies:
   shimmer: ^3.0.0
   bot_toast: ^4.0.4
   fluttertoast: ^8.2.2
-
   smooth_page_indicator: ^1.1.0
   firebase_auth: ^4.6.3
   cloud_firestore: ^4.8.2

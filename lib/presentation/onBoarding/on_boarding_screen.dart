@@ -24,9 +24,7 @@ class OnBoardingScreen extends StatelessWidget {
     var cubit = LaboarCubit.get(context);
 
     return BlocConsumer<LaboarCubit, LaboarState>(
-      listener: (context, state) {
-        // TODO: implement listener
-      },
+      listener: (context, state) {},
       builder: (context, state) {
         return Scaffold(
           backgroundColor: Colors.white,
