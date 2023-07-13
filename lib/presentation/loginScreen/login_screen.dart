@@ -7,20 +7,18 @@ import 'package:laboar/core/components/navigator.dart';
 import 'package:laboar/core/components/on_tap_function.dart';
 import 'package:laboar/core/components/size_box.dart';
 import 'package:laboar/core/components/text_form_field.dart';
-import 'package:laboar/core/cubit/registerCubit/register_cubit.dart';
 import 'package:laboar/core/global/theme/app_color/app_color_light.dart';
 import 'package:laboar/core/global/theme/theme_data/theme_data.dart';
 import 'package:laboar/core/utils/enum.dart';
 import 'package:laboar/generated/assets.dart';
-import 'package:laboar/presentation/loginScreen/login_screen.dart';
+import 'package:laboar/presentation/registerScreen/register_screen.dart';
 
-class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     var formKey = GlobalKey<FormState>();
-    var fullNameController = TextEditingController();
     var passwordController = TextEditingController();
     var phoneController = TextEditingController();
     var localizations = AppLocalizations.of(context)!;
@@ -43,7 +41,7 @@ class RegisterScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(
-                        localizations.register,
+                        localizations.login,
                         style: textTheme.bodyMedium,
                       ),
                       Space(height: 10.h, width: 0),
@@ -53,31 +51,6 @@ class RegisterScreen extends StatelessWidget {
                         style: textTheme.titleMedium!.copyWith(
                           color: AppColorsLight.greyColor,
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.only(bottom: 18, top: 18).r,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        localizations.fullName,
-                        style: textTheme.labelMedium,
-                      ),
-                      DefaultTextFormField(
-                        context: context,
-                        controller: fullNameController,
-                        keyboardType: TextInputType.name,
-                        validate: (String? value) {
-                          if (value!.trim().isEmpty || value.length < 3) {
-                            return localizations.enterFullName;
-                          }
-                          return null;
-                        },
-                        suffix: Icons.person_outlined,
-                        hint: localizations.enterFullName,
                       ),
                     ],
                   ),
@@ -130,20 +103,28 @@ class RegisterScreen extends StatelessWidget {
                         hint: localizations.enterPassword,
                         isPassword: true,
                       ),
+                      Space(height: 15.h, width: 0),
+                      OnTapFunction(
+                        function: () {},
+                        child: Align(
+                          alignment: Alignment.topRight,
+                          child: Text(
+                            '${localizations.forgetPassword} ?',
+                            style: textTheme.labelMedium!.copyWith(
+                              color: AppColorsLight.blackColor,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
                 defaultMaterialButton(
                   function: () {
-                    if (formKey.currentState!.validate()) {
-                      RegisterCubit.get(context).userRegister(
-                        phone: phoneController.text,
-                        password: passwordController.text,
-                        fullName: fullNameController.text,
-                      );
-                    }
+                    if (formKey.currentState!.validate()) {}
                   },
-                  text: localizations.register,
+                  text: localizations.login,
                 ),
                 Space(height: 15.h, width: 0),
                 Center(
@@ -196,16 +177,16 @@ class RegisterScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      localizations.haveAccount,
+                      localizations.noAccount,
                       style: textTheme.labelMedium,
                     ),
                     Space(height: 0, width: 5.w),
                     OnTapFunction(
                       function: () {
-                        navigateTo(context, const LoginScreen());
+                        navigateTo(context, const RegisterScreen());
                       },
                       child: Text(
-                        localizations.signIn,
+                        localizations.signUp,
                         style: textTheme.labelMedium!.copyWith(
                           color: AppColorsLight.lightPrimaryColor,
                         ),

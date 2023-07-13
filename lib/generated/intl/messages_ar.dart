@@ -56,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hintSend":
             MessageLookupByLibrary.simpleMessage("سيتم ارسال الكود مرة اخري"),
         "light": MessageLookupByLibrary.simpleMessage("فاتح"),
+        "login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
         "loginHere":
             MessageLookupByLibrary.simpleMessage("بتسجيلك هنا فانت توافق علي"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
@@ -64,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "otp": MessageLookupByLibrary.simpleMessage("رمز الدخول"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الجوال"),
+        "register": MessageLookupByLibrary.simpleMessage("تسجيل جديد"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("اعادة كلمة المرور"),
         "selectLanguage": MessageLookupByLibrary.simpleMessage("اختار اللغة"),

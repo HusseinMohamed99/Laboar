@@ -56,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hintSend":
             MessageLookupByLibrary.simpleMessage("Code Sent. Resend Code in"),
         "light": MessageLookupByLibrary.simpleMessage("Light"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginHere": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you agree to our"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
@@ -65,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "otp": MessageLookupByLibrary.simpleMessage("Otp"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone"),
+        "register": MessageLookupByLibrary.simpleMessage("Register"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "selectLanguage":
             MessageLookupByLibrary.simpleMessage("Select Language"),

@@ -15,6 +15,8 @@
   "skip": "Skip",
   "signIn": "Sign In",
   "signUp": "Sign Up",
+  "login": "Login",
+  "register": "Register",
   "or": "OR",
   "authLogin": "Please Enter your Phone and password\nto continue",
   "phoneNumber": "Phone",
