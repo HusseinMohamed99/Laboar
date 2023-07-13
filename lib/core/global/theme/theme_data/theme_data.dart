@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:laboar/core/global/theme/app_color/app_color_dark.dart';
@@ -9,6 +10,16 @@ final getThemeData = {
   AppTheme.lightTheme: ThemeData(
     scaffoldBackgroundColor: AppColorsLight.scaffoldBackgroundColor,
     primaryColor: AppColorsLight.lightPrimaryColor,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+      toolbarHeight: 20.h,
+      systemOverlayStyle: const SystemUiOverlayStyle(
+        statusBarColor: AppColorsLight.lightSecondaryColor,
+        statusBarBrightness: Brightness.light,
+        statusBarIconBrightness: Brightness.dark,
+      ),
+    ),
     bottomSheetTheme: BottomSheetThemeData(
       backgroundColor: AppColorsLight.bottomSheetColor,
       shape: RoundedRectangleBorder(
@@ -21,11 +32,13 @@ final getThemeData = {
     textTheme: TextTheme(
       bodyLarge: GoogleFonts.quicksand(
         color: AppColorsLight.textBlackColor,
-        fontSize: 48.sp,
+        fontSize: 40.sp,
         fontWeight: FontWeight.bold,
       ),
       bodyMedium: GoogleFonts.quicksand(
         color: AppColorsLight.textBlackColor,
+        fontWeight: FontWeight.bold,
+        fontSize: 28.sp,
       ),
       bodySmall: GoogleFonts.quicksand(
         color: AppColorsLight.textBlackColor,
@@ -79,7 +92,8 @@ final getThemeData = {
   AppTheme.darkTheme: ThemeData(
     scaffoldBackgroundColor: AppColorsDark.darkPrimary,
     primaryColor: AppColorsDark.darkPrimary,
-    appBarTheme: const AppBarTheme(backgroundColor: Colors.transparent),
+    appBarTheme:
+        const AppBarTheme(backgroundColor: Colors.transparent, elevation: 0),
     bottomSheetTheme: BottomSheetThemeData(
       backgroundColor: AppColorsDark.greyDarkColor,
       shape: RoundedRectangleBorder(

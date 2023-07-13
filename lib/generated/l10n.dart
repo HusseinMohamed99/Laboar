@@ -140,11 +140,21 @@ class S {
     );
   }
 
-  /// `By creating an account, you agree to our  \nTerm and Conditions`
+  /// `Term and Conditions`
   String get termAndConditions {
     return Intl.message(
-      'By creating an account, you agree to our  \nTerm and Conditions',
+      'Term and Conditions',
       name: 'termAndConditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By creating an account, you agree to our`
+  String get loginHere {
+    return Intl.message(
+      'By creating an account, you agree to our',
+      name: 'loginHere',
       desc: '',
       args: [],
     );
@@ -231,20 +241,20 @@ class S {
   }
 
   /// `Enter Your Phone`
-  String get EnterPhoneNumber {
+  String get enterPhoneNumber {
     return Intl.message(
       'Enter Your Phone',
-      name: 'EnterPhoneNumber',
+      name: 'enterPhoneNumber',
       desc: '',
       args: [],
     );
   }
 
   /// `Enter Your Password`
-  String get EnterPassword {
+  String get enterPassword {
     return Intl.message(
       'Enter Your Password',
-      name: 'EnterPassword',
+      name: 'enterPassword',
       desc: '',
       args: [],
     );
@@ -340,10 +350,10 @@ class S {
     );
   }
 
-  /// `An Authentecation code has been sent to`
+  /// `An Authentication code has been sent to`
   String get hintOtp {
     return Intl.message(
-      'An Authentecation code has been sent to',
+      'An Authentication code has been sent to',
       name: 'hintOtp',
       desc: '',
       args: [],

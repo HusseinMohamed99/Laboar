@@ -14,13 +14,14 @@ Widget defaultMaterialButton({
   Function? onTap,
 }) =>
     Container(
+      alignment: Alignment.center,
       width: width?.w ?? 388.w,
       height: height?.h ?? 45.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
           radius?.r ?? 16.r,
         ),
-        color: color,
+        color: color ?? AppColorsLight.lightPrimaryColor,
       ),
       child: MaterialButton(
         clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -50,21 +51,27 @@ Widget defaultButton({
   Function? onTap,
 }) =>
     Container(
-      width: width?.w ?? 310.w,
-      height: height?.h ?? 43.h,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(
-          radius?.r ?? 10.r,
+      alignment: Alignment.center,
+      width: width?.w ?? 388.w,
+      height: height?.h ?? 45.h,
+      decoration: ShapeDecoration(
+        shape: RoundedRectangleBorder(
+          side: const BorderSide(
+            width: 0.50,
+            strokeAlign: BorderSide.strokeAlignCenter,
+            color: Color(0xFFDFDFDF),
+          ),
+          borderRadius: BorderRadius.circular(
+            radius?.r ?? 8.r,
+          ),
         ),
-        color: color,
+        color: color ?? AppColorsLight.lightPrimaryColor,
       ),
       child: MaterialButton(
         clipBehavior: Clip.antiAliasWithSaveLayer,
-        height: 22.h,
-        minWidth: 59.w,
+        height: 45.h,
+        minWidth: 388.w,
         onPressed: function,
-        child: FittedBox(
-          child: widget,
-        ),
+        child: widget,
       ),
     );

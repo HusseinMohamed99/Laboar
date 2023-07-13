@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:laboar/core/components/buttons.dart';
 import 'package:laboar/core/components/navigator.dart';
 import 'package:laboar/core/components/size_box.dart';
+import 'package:laboar/core/cubit/laboarCubit/laboar_cubit.dart';
 import 'package:laboar/core/global/theme/app_color/app_color_light.dart';
 import 'package:laboar/core/global/theme/theme_data/theme_data.dart';
 import 'package:laboar/core/network/cache_helper.dart';
@@ -11,6 +14,7 @@ import 'package:laboar/core/utils/enum.dart';
 import 'package:laboar/generated/assets.dart';
 import 'package:laboar/model/on_board_model.dart';
 import 'package:laboar/presentation/homeScreen/home_screen.dart';
+import 'package:laboar/presentation/registerScreen/register_screen.dart';
 
 class PrefScreen extends StatefulWidget {
   const PrefScreen({
@@ -24,27 +28,6 @@ class PrefScreen extends StatefulWidget {
 class _PrefScreenState extends State<PrefScreen> {
   var pageController = PageController();
   int currentValue = 0;
-
-  List<BoardingModel> boarding = [
-    BoardingModel(
-      image: Assets.imagesPref1,
-      title: 'Easy Process',
-      body:
-          'Find all your house needs in one place.  We provide every service to make your home experience smooth.',
-    ),
-    BoardingModel(
-      image: Assets.imagesPref2,
-      title: 'Expert People',
-      body:
-          'We have the best in class individuals working just for you. They are well  trained and capable of handling anything you need.',
-    ),
-    BoardingModel(
-      image: Assets.imagesPref3,
-      title: 'All In One Place',
-      body:
-          '"Access it online while you travel, anywhere, anytime. Your Plans are always there, accessible from any mobile phone, tablet Learn From Other Travelers."',
-    ),
-  ];
 
   bool isLast = false;
 
@@ -61,27 +44,64 @@ class _PrefScreenState extends State<PrefScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var localizations = AppLocalizations.of(context)!;
     final textTheme = getThemeData[AppTheme.lightTheme]!.textTheme;
+    var cubit = LaboarCubit.get(context);
+    List<BoardingModel> boarding = [
+      BoardingModel(
+        image: Assets.imagesPref1,
+        title: localizations.title1,
+        body: localizations.body1,
+      ),
+      BoardingModel(
+        image: Assets.imagesPref2,
+        title: localizations.title2,
+        body: localizations.body2,
+      ),
+      BoardingModel(
+        image: Assets.imagesPref3,
+        title: localizations.title3,
+        body: localizations.body3,
+      ),
+    ];
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: AppColorsLight.lightSecondaryColor,
+          statusBarBrightness: Brightness.light,
+          statusBarIconBrightness: Brightness.dark,
+        ),
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Align(
-          alignment: Alignment.bottomRight,
-          child: TextButton(
-            onPressed: () {
-              submit();
-            },
-            child: Text(
-              isLast ? '' : 'skip',
-              style: textTheme.labelLarge!.copyWith(
-                color: AppColorsLight.lightThirdColor,
-                fontWeight: FontWeight.bold,
+        toolbarHeight: 40.h,
+        title: cubit.currentLanguage == "ar"
+            ? Align(
+                alignment: Alignment.topLeft,
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    isLast ? '' : localizations.skip,
+                    style: textTheme.labelLarge!.copyWith(
+                      color: AppColorsLight.lightThirdColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              )
+            : Align(
+                alignment: Alignment.topRight,
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    isLast ? '' : localizations.skip,
+                    style: textTheme.labelLarge!.copyWith(
+                      color: AppColorsLight.lightThirdColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
               ),
-            ),
-          ),
-        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0).r,
@@ -146,9 +166,9 @@ class _PrefScreenState extends State<PrefScreen> {
                       isLast
                           ? defaultMaterialButton(
                               function: () {
-                                navigateAndFinish(context, const HomeScreen());
+                                navigateTo(context, const RegisterScreen());
                               },
-                              text: 'Enter',
+                              text: localizations.enter,
                               color: AppColorsLight.lightPrimaryColor,
                             )
                           : defaultMaterialButton(
@@ -164,7 +184,7 @@ class _PrefScreenState extends State<PrefScreen> {
                                   );
                                 }
                               },
-                              text: 'Next',
+                              text: localizations.next,
                               color: AppColorsLight.lightPrimaryColor,
                             ),
                       Space(height: 48.h, width: 0),

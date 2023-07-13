@@ -22,10 +22,6 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "EnterPassword":
-            MessageLookupByLibrary.simpleMessage("ادخل كلمة المرور"),
-        "EnterPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("ادخل رقم الهاتف"),
         "appTitle": MessageLookupByLibrary.simpleMessage("لابوار"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "authLogin": MessageLookupByLibrary.simpleMessage(
@@ -43,6 +39,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "enter": MessageLookupByLibrary.simpleMessage("دخول"),
         "enterFullName":
             MessageLookupByLibrary.simpleMessage("ادخل الاسم بالكامل"),
+        "enterPassword":
+            MessageLookupByLibrary.simpleMessage("ادخل كلمة المرور"),
+        "enterPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("ادخل رقم الهاتف"),
         "facebook": MessageLookupByLibrary.simpleMessage("فيس بوك"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
@@ -56,9 +56,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "hintSend":
             MessageLookupByLibrary.simpleMessage("سيتم ارسال الكود مرة اخري"),
         "light": MessageLookupByLibrary.simpleMessage("فاتح"),
+        "loginHere":
+            MessageLookupByLibrary.simpleMessage("بتسجيلك هنا فانت توافق علي"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "noAccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب ؟"),
-        "or": MessageLookupByLibrary.simpleMessage("او"),
+        "or": MessageLookupByLibrary.simpleMessage("أو"),
         "otp": MessageLookupByLibrary.simpleMessage("رمز الدخول"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الجوال"),
@@ -70,11 +72,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "signUp": MessageLookupByLibrary.simpleMessage("تسجيل جديد"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "submit": MessageLookupByLibrary.simpleMessage("ارسال"),
-        "termAndConditions": MessageLookupByLibrary.simpleMessage(
-            "بتسجيلك هنا فانت توافق علي \nالشروط والاحكام"),
+        "termAndConditions":
+            MessageLookupByLibrary.simpleMessage("الشروط والاحكام"),
         "theme": MessageLookupByLibrary.simpleMessage("المظهر"),
         "title": MessageLookupByLibrary.simpleMessage(
-            "جميع الخدمات المنزلية\nفي مكان واحد"),
+            "جميع الخدمات المنزلية \nفي مكان واحد"),
         "title1": MessageLookupByLibrary.simpleMessage("سهولة الوصول"),
         "title2": MessageLookupByLibrary.simpleMessage("عمالة مميزة"),
         "title3": MessageLookupByLibrary.simpleMessage("نجمع كل احتيجاتك")

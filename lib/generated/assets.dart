@@ -2,6 +2,8 @@
 class Assets {
   Assets._();
 
+  static const String imagesFacebook = 'assets/images/facebook.svg';
+  static const String imagesGoogle = 'assets/images/google.svg';
   static const String imagesOnBoarding = 'assets/images/onBoarding.svg';
   static const String imagesPref1 = 'assets/images/pref1.svg';
   static const String imagesPref2 = 'assets/images/pref2.svg';

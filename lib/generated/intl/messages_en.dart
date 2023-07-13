@@ -22,10 +22,6 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "EnterPassword":
-            MessageLookupByLibrary.simpleMessage("Enter Your Password"),
-        "EnterPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Enter Your Phone"),
         "appTitle": MessageLookupByLibrary.simpleMessage("Laboar"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "authLogin": MessageLookupByLibrary.simpleMessage(
@@ -43,6 +39,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "enter": MessageLookupByLibrary.simpleMessage("Enter"),
         "enterFullName":
             MessageLookupByLibrary.simpleMessage("Enter Your Full Name"),
+        "enterPassword":
+            MessageLookupByLibrary.simpleMessage("Enter Your Password"),
+        "enterPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Enter Your Phone"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("Forget Password"),
@@ -50,12 +50,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "google": MessageLookupByLibrary.simpleMessage("Google"),
         "haveAccount": MessageLookupByLibrary.simpleMessage("Have Account ?"),
         "hintOtp": MessageLookupByLibrary.simpleMessage(
-            "An Authentecation code has been sent to"),
+            "An Authentication code has been sent to"),
         "hintPassword": MessageLookupByLibrary.simpleMessage(
             "Create strong and secured\nnew password."),
         "hintSend":
             MessageLookupByLibrary.simpleMessage("Code Sent. Resend Code in"),
         "light": MessageLookupByLibrary.simpleMessage("Light"),
+        "loginHere": MessageLookupByLibrary.simpleMessage(
+            "By creating an account, you agree to our"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noAccount":
             MessageLookupByLibrary.simpleMessage("Don’t Have Account ?"),
@@ -71,8 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
-        "termAndConditions": MessageLookupByLibrary.simpleMessage(
-            "By creating an account, you agree to our  \nTerm and Conditions"),
+        "termAndConditions":
+            MessageLookupByLibrary.simpleMessage("Term and Conditions"),
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "title":
             MessageLookupByLibrary.simpleMessage("Find Your\nHome Service"),

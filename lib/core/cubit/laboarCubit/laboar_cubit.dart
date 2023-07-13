@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:laboar/core/cubit/laboarCubit/laboar_state.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:laboar/core/network/cache_helper.dart';
 
 class LaboarCubit extends Cubit<LaboarState> {
   LaboarCubit() : super(LaboarInitialState());
@@ -12,16 +12,30 @@ class LaboarCubit extends Cubit<LaboarState> {
 
   void changeLanguage(String newLanguage) async {
     emit(LaboarChangeLanguageLoadingState());
-    final pref = await SharedPreferences.getInstance();
     if (currentLanguage == newLanguage) return;
     currentLanguage = newLanguage;
-    pref.setString("Lang", currentLanguage).then((value) {
+    CacheHelper.saveData(key: 'Lang', value: currentLanguage).then((value) {
       emit(LaboarChangeLanguageSuccessState());
       if (kDebugMode) {
         print('currentLanguage === $currentLanguage');
       }
     }).catchError((error) {
       emit(LaboarChangeLanguageErrorState());
+    });
+  }
+
+  bool isCheck = false;
+  void boxCheck(bool newCheck) async {
+    emit(LaboarChangeValueLoadingState());
+    if (isCheck == newCheck) return;
+    isCheck = newCheck;
+    CacheHelper.saveData(key: 'check', value: isCheck).then((value) {
+      emit(LaboarChangeValueSuccessState());
+      if (kDebugMode) {
+        print('isCheck === $isCheck');
+      }
+    }).catchError((error) {
+      emit(LaboarChangeValueErrorState());
     });
   }
 }
