@@ -52,7 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hintOtp": MessageLookupByLibrary.simpleMessage(
             "An Authentication code has been sent to"),
         "hintPassword": MessageLookupByLibrary.simpleMessage(
-            "Create strong and secured\nnew password."),
+            "Create strong and secured\nnew password.(Htm123@\$)"),
         "hintSend":
             MessageLookupByLibrary.simpleMessage("Code Sent. Resend Code in"),
         "light": MessageLookupByLibrary.simpleMessage("Light"),

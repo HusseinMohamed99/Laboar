@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,8 +11,10 @@ import 'package:laboar/core/cubit/laboarCubit/laboar_cubit.dart';
 import 'package:laboar/core/cubit/laboarCubit/laboar_state.dart';
 import 'package:laboar/core/global/theme/theme_data/theme_data.dart';
 import 'package:laboar/core/network/cache_helper.dart';
+import 'package:laboar/core/network/constances.dart';
 import 'package:laboar/core/utils/enum.dart';
-import 'package:laboar/presentation/otpScreen/otp_screen.dart';
+import 'package:laboar/presentation/loginScreen/login_screen.dart';
+import 'package:laboar/presentation/onBoarding/on_boarding_screen.dart';
 import 'package:wakelock/wakelock.dart';
 
 import 'firebase_options.dart';
@@ -24,6 +27,10 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   Bloc.observer = MyBlocObserver();
+
+  if (kDebugMode) {
+    print(uId);
+  }
 
   await CacheHelper.init();
   runApp(const MyApp());
@@ -71,7 +78,9 @@ class MyApp extends StatelessWidget {
                     ),
                     debugShowCheckedModeBanner: false,
                     theme: getThemeData[AppTheme.lightTheme],
-                    home: const OtpScreen(),
+                    home: uId!.isEmpty
+                        ? const OnBoardingScreen()
+                        : const LoginScreen(),
                   );
                 },
               );

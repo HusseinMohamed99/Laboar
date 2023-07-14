@@ -410,10 +410,10 @@ class S {
     );
   }
 
-  /// `Create strong and secured\nnew password.`
+  /// `Create strong and secured\nnew password.(Htm123@$)`
   String get hintPassword {
     return Intl.message(
-      'Create strong and secured\nnew password.',
+      'Create strong and secured\nnew password.(Htm123@\$)',
       name: 'hintPassword',
       desc: '',
       args: [],

@@ -7,12 +7,12 @@ import 'package:laboar/core/components/navigator.dart';
 import 'package:laboar/core/components/on_tap_function.dart';
 import 'package:laboar/core/components/size_box.dart';
 import 'package:laboar/core/components/text_form_field.dart';
-import 'package:laboar/core/cubit/registerCubit/register_cubit.dart';
 import 'package:laboar/core/global/theme/app_color/app_color_light.dart';
 import 'package:laboar/core/global/theme/theme_data/theme_data.dart';
 import 'package:laboar/core/utils/enum.dart';
 import 'package:laboar/generated/assets.dart';
 import 'package:laboar/presentation/loginScreen/login_screen.dart';
+import 'package:laboar/presentation/otpScreen/otp_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -96,7 +96,9 @@ class RegisterScreen extends StatelessWidget {
                         controller: phoneController,
                         keyboardType: TextInputType.phone,
                         validate: (String? value) {
-                          if (value!.trim().isEmpty || value.length == 11) {
+                          if (value!.trim().isEmpty ||
+                              value.length < 11 ||
+                              value.length > 11) {
                             return localizations.enterPhoneNumber;
                           }
                           return null;
@@ -118,12 +120,18 @@ class RegisterScreen extends StatelessWidget {
                       ),
                       DefaultTextFormField(
                         context: context,
+                        obscuringCharacter: '*',
                         controller: passwordController,
                         keyboardType: TextInputType.visiblePassword,
                         validate: (String? value) {
-                          if (value!.trim().isEmpty || value.length < 8) {
-                            return localizations.enterPassword;
+                          RegExp regex = RegExp(
+                              r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#+/%^=_$&*~]).{8,}$');
+                          if (value!.trim().isEmpty ||
+                              value.trim().length < 8 ||
+                              !regex.hasMatch(value)) {
+                            return localizations.hintPassword;
                           }
+
                           return null;
                         },
                         suffix: Icons.person_outlined,
@@ -136,11 +144,12 @@ class RegisterScreen extends StatelessWidget {
                 defaultMaterialButton(
                   function: () {
                     if (formKey.currentState!.validate()) {
-                      RegisterCubit.get(context).userRegister(
-                        phone: phoneController.text,
-                        password: passwordController.text,
-                        fullName: fullNameController.text,
-                      );
+                      navigateTo(context, const OtpScreen());
+                      // RegisterCubit.get(context).userRegister(
+                      //   phone: phoneController.text,
+                      //   password: passwordController.text,
+                      //   fullName: fullNameController.text,
+                      // );
                     }
                   },
                   text: localizations.register,

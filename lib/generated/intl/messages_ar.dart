@@ -52,7 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hintOtp": MessageLookupByLibrary.simpleMessage(
             "رمز التحقيق تم ارسالة الي رقم"),
         "hintPassword": MessageLookupByLibrary.simpleMessage(
-            "برجاء ادخال كلمة مرور \nلتاكيد حسابك"),
+            "برجاء ادخال كلمة مرور \nلتاكيد حسابك (Htm123@\$)"),
         "hintSend":
             MessageLookupByLibrary.simpleMessage("سيتم ارسال الكود مرة اخري"),
         "light": MessageLookupByLibrary.simpleMessage("فاتح"),
