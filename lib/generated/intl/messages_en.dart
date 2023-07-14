@@ -51,6 +51,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "google": MessageLookupByLibrary.simpleMessage("Google"),
         "haveAccount": MessageLookupByLibrary.simpleMessage("Have Account ?"),
+        "hintForgetPassword": MessageLookupByLibrary.simpleMessage(
+            "Enter your Phone Number\nto reset password."),
         "hintOtp": MessageLookupByLibrary.simpleMessage(
             "An Authentication code has been sent to"),
         "hintPassword": MessageLookupByLibrary.simpleMessage(
@@ -73,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "savePassword": MessageLookupByLibrary.simpleMessage("Save Password"),
         "selectLanguage":
             MessageLookupByLibrary.simpleMessage("Select Language"),
+        "send": MessageLookupByLibrary.simpleMessage("Send"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),

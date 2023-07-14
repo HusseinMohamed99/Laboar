@@ -51,6 +51,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullName": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
         "google": MessageLookupByLibrary.simpleMessage("جوجل"),
         "haveAccount": MessageLookupByLibrary.simpleMessage(" لديك حساب ؟"),
+        "hintForgetPassword": MessageLookupByLibrary.simpleMessage(
+            "برجاء ادخال رقم الهاتف \nلتاكيد حسابك"),
         "hintOtp": MessageLookupByLibrary.simpleMessage(
             "رمز التحقيق تم ارسالة الي رقم"),
         "hintPassword": MessageLookupByLibrary.simpleMessage(
@@ -72,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اعادة كلمة المرور"),
         "savePassword": MessageLookupByLibrary.simpleMessage("حفظ"),
         "selectLanguage": MessageLookupByLibrary.simpleMessage("اختار اللغة"),
+        "send": MessageLookupByLibrary.simpleMessage("ارسال"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUp": MessageLookupByLibrary.simpleMessage("تسجيل جديد"),

@@ -13,14 +13,13 @@ import 'package:laboar/core/global/theme/theme_data/theme_data.dart';
 import 'package:laboar/core/utils/enum.dart';
 import 'package:laboar/generated/assets.dart';
 
-class ResetScreen extends StatelessWidget {
-  const ResetScreen({super.key});
+class ForgetPasswordScreen extends StatelessWidget {
+  const ForgetPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     var formKey = GlobalKey<FormState>();
-    var passwordController = TextEditingController();
-    var confirmPasswordController = TextEditingController();
+    var phoneController = TextEditingController();
 
     var localizations = AppLocalizations.of(context)!;
     final textTheme = getThemeData[AppTheme.lightTheme]!.textTheme;
@@ -55,12 +54,12 @@ class ResetScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             Text(
-                              localizations.resetPassword,
+                              localizations.forgetPassword.substring(0, 15),
                               style: textTheme.bodyMedium,
                             ),
                             Space(height: 10.h, width: 0),
                             Text(
-                              localizations.hintPassword,
+                              localizations.hintForgetPassword,
                               textAlign: TextAlign.center,
                               style: textTheme.titleMedium!.copyWith(
                                 color: AppColorsLight.greyColor,
@@ -75,62 +74,22 @@ class ResetScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              localizations.password,
+                              localizations.phoneNumber,
                               style: textTheme.labelMedium,
                             ),
                             DefaultTextFormField(
-                              obscuringCharacter: '*',
                               context: context,
-                              controller: confirmPasswordController,
-                              keyboardType: TextInputType.visiblePassword,
+                              controller: phoneController,
+                              keyboardType: TextInputType.phone,
                               validate: (String? value) {
                                 if (value!.trim().isEmpty ||
                                     value.length == 11) {
-                                  return localizations.password;
+                                  return localizations.enterPhoneNumber;
                                 }
                                 return null;
                               },
-                              isPassword:
-                                  ResetPasswordCubit.get(context).isPassword,
-                              suffixPressed: () {
-                                ResetPasswordCubit.get(context).showPassword();
-                              },
-                              suffixImage:
-                                  ResetPasswordCubit.get(context).suffix,
-                              hint: localizations.enterPassword,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(bottom: 38).r,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              localizations.confirmPassword,
-                              style: textTheme.labelMedium,
-                            ),
-                            DefaultTextFormField(
-                              obscuringCharacter: '*',
-                              context: context,
-                              controller: passwordController,
-                              keyboardType: TextInputType.visiblePassword,
-                              validate: (String? value) {
-                                if (value!.trim().isEmpty || value.length < 8) {
-                                  return localizations.confirmPassword;
-                                }
-                                return null;
-                              },
-                              hint: localizations.enterConfirmPassword,
-                              isPassword: ResetPasswordCubit.get(context)
-                                  .isConfirmPassword,
-                              suffixPressed: () {
-                                ResetPasswordCubit.get(context)
-                                    .showConfirmPassword();
-                              },
-                              suffixImage:
-                                  ResetPasswordCubit.get(context).suffixImage,
+                              suffixImage: Assets.imagesPhone,
+                              hint: localizations.enterPhoneNumber,
                             ),
                           ],
                         ),
@@ -139,7 +98,7 @@ class ResetScreen extends StatelessWidget {
                         function: () {
                           if (formKey.currentState!.validate()) {}
                         },
-                        text: localizations.savePassword,
+                        text: localizations.send,
                       ),
                     ],
                   ),

@@ -300,6 +300,16 @@ class S {
     );
   }
 
+  /// `Enter your Phone Number\nto reset password.`
+  String get hintForgetPassword {
+    return Intl.message(
+      'Enter your Phone Number\nto reset password.',
+      name: 'hintForgetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Facebook`
   String get facebook {
     return Intl.message(
@@ -445,6 +455,16 @@ class S {
     return Intl.message(
       'Save Password',
       name: 'savePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get send {
+    return Intl.message(
+      'Send',
+      name: 'send',
       desc: '',
       args: [],
     );

@@ -70,7 +70,6 @@ class OtpScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                Space(height: 18.h, width: 0),
                 otpField(context),
                 Space(height: 38.h, width: 0),
                 defaultMaterialButton(
@@ -113,35 +112,38 @@ class OtpScreen extends StatelessWidget {
   Widget otpField(BuildContext context) {
     final textTheme = getThemeData[AppTheme.lightTheme]!.textTheme;
 
-    return OTPTextField(
-      length: 4,
-      width: double.infinity,
-      fieldWidth: 48.w,
-      otpFieldStyle: OtpFieldStyle(
-        backgroundColor: AppColorsLight.fillColor,
-        borderColor: AppColorsLight.greyColor,
-        focusBorderColor: AppColorsLight.lightPrimaryColor,
-        enabledBorderColor: AppColorsLight.greyColor,
-        disabledBorderColor: AppColorsLight.lightPrimaryColor,
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 18, top: 40).r,
+      child: OTPTextField(
+        length: 4,
+        width: double.infinity,
+        fieldWidth: 48.w,
+        otpFieldStyle: OtpFieldStyle(
+          backgroundColor: AppColorsLight.fillColor,
+          borderColor: AppColorsLight.greyColor,
+          focusBorderColor: AppColorsLight.lightPrimaryColor,
+          enabledBorderColor: AppColorsLight.greyColor,
+          disabledBorderColor: AppColorsLight.lightPrimaryColor,
+        ),
+        style: textTheme.labelLarge!,
+        textFieldAlignment: MainAxisAlignment.spaceAround,
+        fieldStyle: FieldStyle.box,
+        contentPadding: const EdgeInsets.symmetric(vertical: 18).r,
+        // onCompleted: (pin) {
+        //   print("Completed: " + pin);
+        //   setState(() {
+        //     smsCode = pin;
+        //   });
+        // },
+        onChanged: (pin) {
+          if (kDebugMode) {
+            print("Completed: $pin");
+          }
+          // setState(() {
+          //   smsCode = pin;
+          // });
+        },
       ),
-      style: textTheme.labelLarge!,
-      textFieldAlignment: MainAxisAlignment.spaceAround,
-      fieldStyle: FieldStyle.box,
-      contentPadding: const EdgeInsets.symmetric(vertical: 18).r,
-      // onCompleted: (pin) {
-      //   print("Completed: " + pin);
-      //   setState(() {
-      //     smsCode = pin;
-      //   });
-      // },
-      onChanged: (pin) {
-        if (kDebugMode) {
-          print("Completed: $pin");
-        }
-        // setState(() {
-        //   smsCode = pin;
-        // });
-      },
     );
   }
 
