@@ -26,7 +26,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColorsLight.lightSecondaryColor,
       appBar: AppBar(
-        toolbarHeight: 58.h,
+        toolbarHeight: 28.h,
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
@@ -109,7 +109,7 @@ class LoginScreen extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.topRight,
                           child: Text(
-                            '${localizations.forgetPassword} ?',
+                            localizations.forgetPassword,
                             style: textTheme.labelMedium!.copyWith(
                               color: AppColorsLight.blackColor,
                               fontWeight: FontWeight.w400,

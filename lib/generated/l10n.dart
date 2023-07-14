@@ -290,10 +290,10 @@ class S {
     );
   }
 
-  /// `Forget Password`
+  /// `Forget Password ?`
   String get forgetPassword {
     return Intl.message(
-      'Forget Password',
+      'Forget Password ?',
       name: 'forgetPassword',
       desc: '',
       args: [],
@@ -360,10 +360,10 @@ class S {
     );
   }
 
-  /// `Otp`
+  /// `OTP`
   String get otp {
     return Intl.message(
-      'Otp',
+      'OTP',
       name: 'otp',
       desc: '',
       args: [],

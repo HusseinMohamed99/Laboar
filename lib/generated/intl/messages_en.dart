@@ -45,7 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter Your Phone"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "forgetPassword":
-            MessageLookupByLibrary.simpleMessage("Forget Password"),
+            MessageLookupByLibrary.simpleMessage("Forget Password ?"),
         "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "google": MessageLookupByLibrary.simpleMessage("Google"),
         "haveAccount": MessageLookupByLibrary.simpleMessage("Have Account ?"),
@@ -63,7 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noAccount":
             MessageLookupByLibrary.simpleMessage("Don’t Have Account ?"),
         "or": MessageLookupByLibrary.simpleMessage("OR"),
-        "otp": MessageLookupByLibrary.simpleMessage("Otp"),
+        "otp": MessageLookupByLibrary.simpleMessage("OTP"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),

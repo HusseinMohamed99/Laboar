@@ -11,7 +11,7 @@ import 'package:laboar/core/cubit/laboarCubit/laboar_state.dart';
 import 'package:laboar/core/global/theme/theme_data/theme_data.dart';
 import 'package:laboar/core/network/cache_helper.dart';
 import 'package:laboar/core/utils/enum.dart';
-import 'package:laboar/presentation/onBoarding/on_boarding_screen.dart';
+import 'package:laboar/presentation/otpScreen/otp_screen.dart';
 import 'package:wakelock/wakelock.dart';
 
 import 'firebase_options.dart';
@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
                     ),
                     debugShowCheckedModeBanner: false,
                     theme: getThemeData[AppTheme.lightTheme],
-                    home: const OnBoardingScreen(),
+                    home: const OtpScreen(),
                   );
                 },
               );

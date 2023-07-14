@@ -83,7 +83,7 @@ class DefaultTextFormField extends StatelessWidget {
         autofocus: false,
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.fromLTRB(20, 8, 8, 20).r,
-          fillColor: color ?? Color(0xFFF9FFF6),
+          fillColor: color ?? AppColorsLight.fillColor,
           filled: true,
           suffixIcon: Padding(
             padding: const EdgeInsets.all(15.0).r,

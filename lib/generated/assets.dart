@@ -2,10 +2,41 @@
 class Assets {
   Assets._();
 
+  static const String assetsImagesUser = 'assets/images/user.svg';
+  static const String imagesArrowLeft = 'assets/images/arrow_left.png';
+  static const String imagesBackground = 'assets/images/background.svg';
+  static const String imagesBell = 'assets/images/bell.svg';
+  static const String imagesCalling = 'assets/images/calling.png';
+  static const String imagesCard = 'assets/images/card.svg';
+  static const String imagesCategory1 = 'assets/images/category1.svg';
+  static const String imagesCategory2 = 'assets/images/category2.svg';
+  static const String imagesCategory3svg = 'assets/images/category3svg.svg';
+  static const String imagesCategory4 = 'assets/images/category4.svg';
+  static const String imagesCategory5 = 'assets/images/category5.svg';
+  static const String imagesCategory6 = 'assets/images/category6.svg';
+  static const String imagesDashboard = 'assets/images/dashboard.png';
+  static const String imagesDelete = 'assets/images/delete.png';
+  static const String imagesDone = 'assets/images/done.png';
+  static const String imagesEmpty = 'assets/images/empty.svg';
+  static const String imagesEye = 'assets/images/eye.svg';
   static const String imagesFacebook = 'assets/images/facebook.svg';
+  static const String imagesFail = 'assets/images/fail.png';
+  static const String imagesForward = 'assets/images/forward.png';
   static const String imagesGoogle = 'assets/images/google.svg';
+  static const String imagesHome = 'assets/images/home.png';
+  static const String imagesLocation = 'assets/images/location.svg';
+  static const String imagesLogo = 'assets/images/logo.svg';
+  static const String imagesLogout = 'assets/images/logout.png';
+  static const String imagesMarker = 'assets/images/marker.png';
+  static const String imagesMasterCard = 'assets/images/masterCard.svg';
+  static const String imagesMessage = 'assets/images/message.png';
   static const String imagesOnBoarding = 'assets/images/onBoarding.svg';
+  static const String imagesOrder = 'assets/images/order.png';
+  static const String imagesPhone = 'assets/images/phone.svg';
   static const String imagesPref1 = 'assets/images/pref1.svg';
   static const String imagesPref2 = 'assets/images/pref2.svg';
   static const String imagesPref3 = 'assets/images/pref3.svg';
+  static const String imagesPreview = 'assets/images/preview.svg';
+  static const String imagesUser = 'assets/images/user.png';
+  static const String imagesVisa = 'assets/images/visa.svg';
 }

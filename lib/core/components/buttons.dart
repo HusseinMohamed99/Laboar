@@ -57,6 +57,7 @@ Widget defaultButton({
   double? radius,
   bool isUpperCase = false,
   Color? color,
+  Color? colorSide,
   Function? onTap,
 }) =>
     Container(
@@ -65,10 +66,10 @@ Widget defaultButton({
       height: height?.h ?? 45.h,
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(
-          side: const BorderSide(
+          side: BorderSide(
             width: 0.50,
             strokeAlign: BorderSide.strokeAlignCenter,
-            color: Color(0xFFDFDFDF),
+            color: colorSide ?? const Color(0xFFDFDFDF),
           ),
           borderRadius: BorderRadius.circular(
             radius?.r ?? 8.r,
@@ -82,5 +83,42 @@ Widget defaultButton({
         minWidth: 388.w,
         onPressed: function,
         child: widget,
+      ),
+    );
+
+Widget defaultIconButton({
+  required Function() function,
+  required String image,
+  double? width,
+  double? height,
+  double? radius,
+  bool isUpperCase = false,
+  Color? color,
+  Color? colorSide,
+  Function? onTap,
+}) =>
+    Container(
+      alignment: Alignment.center,
+      width: width?.w ?? 388.w,
+      height: height?.h ?? 45.h,
+      decoration: ShapeDecoration(
+        shape: RoundedRectangleBorder(
+          side: BorderSide(
+            width: 0.50,
+            strokeAlign: BorderSide.strokeAlignCenter,
+            color: colorSide ?? Colors.transparent,
+          ),
+          borderRadius: BorderRadius.circular(
+            radius?.r ?? 8.r,
+          ),
+        ),
+        color: color ?? Colors.transparent,
+      ),
+      child: MaterialButton(
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        height: 45.h,
+        minWidth: 388.w,
+        onPressed: function,
+        child: Image.asset(image),
       ),
     );

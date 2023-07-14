@@ -28,7 +28,7 @@ class RegisterScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColorsLight.lightSecondaryColor,
       appBar: AppBar(
-        toolbarHeight: 58.h,
+        toolbarHeight: 28.h,
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
