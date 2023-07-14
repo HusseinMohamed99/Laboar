@@ -2,8 +2,23 @@
 class Assets {
   Assets._();
 
+  static const String assetsArrowLeft = 'assets/arrow_left.png';
+  static const String assetsArrowRight = 'assets/arrow_right.png';
+  static const String assetsCalling = 'assets/calling.png';
+  static const String assetsDashboard = 'assets/dashboard.png';
+  static const String assetsDelete = 'assets/delete.png';
+  static const String assetsDone = 'assets/done.png';
+  static const String assetsFail = 'assets/fail.png';
+  static const String assetsForward = 'assets/forward.png';
+  static const String assetsHome = 'assets/home.png';
   static const String assetsImagesUser = 'assets/images/user.svg';
+  static const String assetsLogout = 'assets/logout.png';
+  static const String assetsMarker = 'assets/marker.png';
+  static const String assetsMessage = 'assets/message.png';
+  static const String assetsOrder = 'assets/order.png';
+  static const String assetsUser = 'assets/user.png';
   static const String imagesArrowLeft = 'assets/images/arrow_left.png';
+  static const String imagesArrowRight = 'assets/images/arrow_right.png';
   static const String imagesBackground = 'assets/images/background.svg';
   static const String imagesBell = 'assets/images/bell.svg';
   static const String imagesCalling = 'assets/images/calling.png';

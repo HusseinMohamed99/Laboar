@@ -6,12 +6,14 @@ import 'package:laboar/core/components/buttons.dart';
 import 'package:laboar/core/components/navigator.dart';
 import 'package:laboar/core/components/size_box.dart';
 import 'package:laboar/core/components/text_form_field.dart';
+import 'package:laboar/core/cubit/laboarCubit/laboar_cubit.dart';
 import 'package:laboar/core/cubit/resetPasswordCubit/reset_password_cubit.dart';
 import 'package:laboar/core/cubit/resetPasswordCubit/reset_password_state.dart';
 import 'package:laboar/core/global/theme/app_color/app_color_light.dart';
 import 'package:laboar/core/global/theme/theme_data/theme_data.dart';
 import 'package:laboar/core/utils/enum.dart';
 import 'package:laboar/generated/assets.dart';
+import 'package:laboar/presentation/forgetPasswordScreen/forget_password_screen.dart';
 
 class ResetScreen extends StatelessWidget {
   const ResetScreen({super.key});
@@ -39,7 +41,9 @@ class ResetScreen extends StatelessWidget {
                 function: () {
                   pop(context);
                 },
-                image: Assets.imagesArrowLeft,
+                image: LaboarCubit.get(context).currentLanguage == 'en'
+                    ? Assets.imagesArrowLeft
+                    : Assets.assetsArrowRight,
               ),
             ),
             body: SingleChildScrollView(
@@ -137,7 +141,9 @@ class ResetScreen extends StatelessWidget {
                       ),
                       defaultMaterialButton(
                         function: () {
-                          if (formKey.currentState!.validate()) {}
+                          if (formKey.currentState!.validate()) {
+                            navigateTo(context, const ForgetPasswordScreen());
+                          }
                         },
                         text: localizations.savePassword,
                       ),

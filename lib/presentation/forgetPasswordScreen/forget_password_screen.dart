@@ -6,6 +6,7 @@ import 'package:laboar/core/components/buttons.dart';
 import 'package:laboar/core/components/navigator.dart';
 import 'package:laboar/core/components/size_box.dart';
 import 'package:laboar/core/components/text_form_field.dart';
+import 'package:laboar/core/cubit/laboarCubit/laboar_cubit.dart';
 import 'package:laboar/core/cubit/resetPasswordCubit/reset_password_cubit.dart';
 import 'package:laboar/core/cubit/resetPasswordCubit/reset_password_state.dart';
 import 'package:laboar/core/global/theme/app_color/app_color_light.dart';
@@ -38,7 +39,9 @@ class ForgetPasswordScreen extends StatelessWidget {
                 function: () {
                   pop(context);
                 },
-                image: Assets.imagesArrowLeft,
+                image: LaboarCubit.get(context).currentLanguage == 'en'
+                    ? Assets.imagesArrowLeft
+                    : Assets.assetsArrowRight,
               ),
             ),
             body: SingleChildScrollView(
@@ -54,7 +57,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             Text(
-                              localizations.forgetPassword.substring(0, 15),
+                              localizations.forgetPassword.substring(0, 16),
                               style: textTheme.bodyMedium,
                             ),
                             Space(height: 10.h, width: 0),
