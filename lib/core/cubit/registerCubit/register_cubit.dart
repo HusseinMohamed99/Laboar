@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:laboar/core/cubit/registerCubit/register_state.dart';
+import 'package:laboar/generated/assets.dart';
 import 'package:laboar/model/user_model.dart';
 
 class RegisterCubit extends Cubit<RegisterStates> {
@@ -38,13 +38,12 @@ class RegisterCubit extends Cubit<RegisterStates> {
     });
   }
 
-  IconData suffix = Icons.visibility_outlined;
+  String suffix = Assets.imagesEye;
   bool isPassword = true;
 
   void showPassword() {
     isPassword = !isPassword;
-    suffix =
-        isPassword ? Icons.visibility_outlined : Icons.visibility_off_outlined;
+    suffix = isPassword ? Assets.imagesEye : Assets.imagesHide;
 
     emit(ChangePasswordRegisterState());
   }

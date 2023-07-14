@@ -37,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dark": MessageLookupByLibrary.simpleMessage("Dark"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "enter": MessageLookupByLibrary.simpleMessage("Enter"),
+        "enterConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("Enter Your Confirm Password"),
         "enterFullName":
             MessageLookupByLibrary.simpleMessage("Enter Your Full Name"),
         "enterPassword":
@@ -52,7 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hintOtp": MessageLookupByLibrary.simpleMessage(
             "An Authentication code has been sent to"),
         "hintPassword": MessageLookupByLibrary.simpleMessage(
-            "Create strong and secured\nnew password.(Htm123@\$)"),
+            "Create strong and secured\nnew password."),
         "hintSend":
             MessageLookupByLibrary.simpleMessage("Code Sent. Resend Code in"),
         "light": MessageLookupByLibrary.simpleMessage("Light"),
@@ -68,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "savePassword": MessageLookupByLibrary.simpleMessage("Save Password"),
         "selectLanguage":
             MessageLookupByLibrary.simpleMessage("Select Language"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),

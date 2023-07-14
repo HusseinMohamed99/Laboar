@@ -23,6 +23,7 @@ class Assets {
   static const String imagesFail = 'assets/images/fail.png';
   static const String imagesForward = 'assets/images/forward.png';
   static const String imagesGoogle = 'assets/images/google.svg';
+  static const String imagesHide = 'assets/images/Hide.svg';
   static const String imagesHome = 'assets/images/home.png';
   static const String imagesLocation = 'assets/images/location.svg';
   static const String imagesLogo = 'assets/images/logo.svg';

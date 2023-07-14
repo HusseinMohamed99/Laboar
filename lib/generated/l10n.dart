@@ -410,10 +410,10 @@ class S {
     );
   }
 
-  /// `Create strong and secured\nnew password.(Htm123@$)`
+  /// `Create strong and secured\nnew password.`
   String get hintPassword {
     return Intl.message(
-      'Create strong and secured\nnew password.(Htm123@\$)',
+      'Create strong and secured\nnew password.',
       name: 'hintPassword',
       desc: '',
       args: [],
@@ -425,6 +425,26 @@ class S {
     return Intl.message(
       'Confirm Password',
       name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Confirm Password`
+  String get enterConfirmPassword {
+    return Intl.message(
+      'Enter Your Confirm Password',
+      name: 'enterConfirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save Password`
+  String get savePassword {
+    return Intl.message(
+      'Save Password',
+      name: 'savePassword',
       desc: '',
       args: [],
     );

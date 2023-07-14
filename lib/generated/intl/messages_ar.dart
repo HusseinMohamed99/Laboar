@@ -37,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dark": MessageLookupByLibrary.simpleMessage("داكن"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "enter": MessageLookupByLibrary.simpleMessage("دخول"),
+        "enterConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
         "enterFullName":
             MessageLookupByLibrary.simpleMessage("ادخل الاسم بالكامل"),
         "enterPassword":
@@ -52,7 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hintOtp": MessageLookupByLibrary.simpleMessage(
             "رمز التحقيق تم ارسالة الي رقم"),
         "hintPassword": MessageLookupByLibrary.simpleMessage(
-            "برجاء ادخال كلمة مرور \nلتاكيد حسابك (Htm123@\$)"),
+            "برجاء ادخال كلمة مرور \nلتاكيد حسابك"),
         "hintSend":
             MessageLookupByLibrary.simpleMessage("سيتم ارسال الكود مرة اخري"),
         "light": MessageLookupByLibrary.simpleMessage("فاتح"),
@@ -68,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("تسجيل جديد"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("اعادة كلمة المرور"),
+        "savePassword": MessageLookupByLibrary.simpleMessage("حفظ"),
         "selectLanguage": MessageLookupByLibrary.simpleMessage("اختار اللغة"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),

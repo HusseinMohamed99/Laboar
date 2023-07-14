@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:laboar/core/components/on_tap_function.dart';
 import 'package:laboar/core/global/theme/app_color/app_color_light.dart';
 
 class DefaultTextFormField extends StatelessWidget {
@@ -24,7 +26,7 @@ class DefaultTextFormField extends StatelessWidget {
       this.isClickable,
       this.isPassword,
       this.decoration,
-      this.suffix,
+      this.suffixImage,
       this.suffixPressed,
       this.prefix,
       this.maxLength,
@@ -47,7 +49,7 @@ class DefaultTextFormField extends StatelessWidget {
   final bool? isPassword;
   final bool? isClickable;
   final InputDecoration? decoration;
-  final IconData? suffix;
+  final String? suffixImage;
   final IconData? prefix;
   final Function? suffixPressed;
   final TextStyle? style;
@@ -85,14 +87,19 @@ class DefaultTextFormField extends StatelessWidget {
           contentPadding: const EdgeInsets.fromLTRB(20, 8, 8, 20).r,
           fillColor: color ?? AppColorsLight.fillColor,
           filled: true,
-          suffixIcon: Padding(
-            padding: const EdgeInsets.all(15.0).r,
-            child: Icon(
-              suffix,
-              color: AppColorsLight.greyColor,
-              size: 24.sp,
-            ),
-          ),
+          suffixIcon: suffixImage != null
+              ? OnTapFunction(
+                  function: () {
+                    suffixPressed!();
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0).r,
+                    child: SvgPicture.asset(
+                      suffixImage!,
+                    ),
+                  ),
+                )
+              : null,
           // suffixIcon: suffix != null
           //     ? IconButton(
           //         padding: const EdgeInsets.all(15.0).r,
